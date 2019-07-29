@@ -32,6 +32,8 @@ int get_counter(const char *format, op_t ops[], va_list arguments)
 		if (ops[j].op == NULL)
 		{
 			i++;
+			if (format[i] == ' ')
+				return (-1);
 			counter += _putchar('%');
 			counter += _putchar(format[i]);
 		}
