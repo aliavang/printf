@@ -11,7 +11,7 @@ int get_counter(const char *format, op_t ops[], va_list arguments)
 {
 	int counter = 0, i, j;
 
-	if ((format[0] == '%' && format[1] == '\0') || format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
