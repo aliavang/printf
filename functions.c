@@ -20,8 +20,6 @@ int _putchar(char c)
 
 int print_char(va_list arguments)
 {
-	if (va_arg(arguments. int) == NULL)
-		return (-1);
 	_putchar(va_arg(arguments, int));
 	return (1);
 }
@@ -65,9 +63,6 @@ int print_number(va_list arguments)
 	int n  = va_arg(arguments, int);
 	int counter = 0;
 	unsigned int m;
-
-	if (n == NULL)
-		return (-1);
 
 	if (n < 0)
 	{
