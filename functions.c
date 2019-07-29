@@ -66,12 +66,12 @@ int print_number(va_list arguments)
 
 	if (n < 0)
 	{
-		counter = _putchar('-');
+		counter += _putchar('-');
 		m = -n;
 	}
 	else if (n == 0)
 	{
-		counter = _putchar('0');
+		counter += _putchar('0');
 	}
 	else
 		m = n;
@@ -86,12 +86,12 @@ int print_number(va_list arguments)
 					number_started = 1;
 				if (number_started == 1)
 				{
-					counter = _putchar((m / i % 10) + '0');
+					counter += _putchar((m / i % 10) + '0');
 					m = m % i;
 				}
 			}
 		}
-		counter = _putchar(rem + '0');
+		counter += _putchar(rem + '0');
 	}
 	return (counter);
 }
