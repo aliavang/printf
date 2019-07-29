@@ -15,9 +15,11 @@ typedef struct print
 	int (*f)(va_list arguments);
 } op_t;
 int _printf(const char *format, ...);
+int get_counter(const char *format, op_t ops[], va_list arguments);
 int _putchar(char c);
 int print_char(va_list arguments);
 int print_str(va_list arguments);
 int print_percent(va_list arguments);
 int print_number(va_list arguments);
+int print_unsigned(va_list arguments);
 #endif

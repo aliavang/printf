@@ -13,38 +13,14 @@ int _printf(const char *format, ...)
 		{"%", print_percent},
 		{"d", print_number},
 		{"i", print_number},
-		{"u", print_number},
+		{"u", print_unsigned},
 		{NULL, NULL}
 	};
 	va_list arguments;
-	int counter = 0, i, j;
+	int counter = 0;
 
 	va_start(arguments, format);
-
-	if ((format[0] == '%' && format[1] == '\0') || format == NULL)
-		return (-1);
-	for (i = 0; format != NULL && format[i] != '\0'; i++)
-	{
-		if (format[i] != '%')
-		{
-			counter += _putchar(format[i]);
-			continue;
-		}
-		for (j = 0; ops[j].op != NULL; j++)
-		{
-			if (*ops[j].op == format[i + 1])
-			{
-				counter += ops[j].f(arguments);
-				break;
-			}
-		}
-		i++;
-		if (ops[j].op == NULL)
-		{
-			counter += _putchar('%');
-			counter += _putchar(format[i]);
-		}
-	}
+	counter += get_counter(format, ops, arguments);
 	va_end(arguments);
 	return (counter);
 }
