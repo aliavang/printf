@@ -72,6 +72,7 @@ int print_number(va_list arguments)
 	else if (n == 0)
 	{
 		counter += _putchar('0');
+		return (counter);
 	}
 	else
 		m = n;
