@@ -86,7 +86,7 @@ int print_rot13(va_list arguments)
 
 	str = va_arg(arguments, char *);
 	if (str == NULL)
-		s = "(null)";
+		str = "(null)";
 	for (i = 0; str[i]; i++)
 	{
 		for (j = 0; alpha[j]; j++)
