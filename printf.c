@@ -14,11 +14,11 @@ int _printf(const char *format, ...)
 		{"d", print_number},
 		{"i", print_number},
 		{"u", print_unsigned},
-		{"b", print_binary},
-		{"o", print_octal},
-		{"x", print_x},
-		{"X", print_X},
-/*		{"r", print_rev},*/
+/*		{"b", print_binary},
+ *		{"o", print_octal},
+ *		{"x", print_x},
+ *		{"X", print_X},
+ {"r", print_rev},*/
 		{NULL, NULL}
 	};
 	va_list arguments;
