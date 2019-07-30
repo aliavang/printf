@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 		{"u", print_unsigned},
 		{"o", print_octal},
 		{"x", print_x},
+		{"X", print_X},
 		{NULL, NULL}
 	};
 	va_list arguments;

@@ -24,3 +24,24 @@ int print_x(va_list arguments)
 	}
 	return (counter);
 }
+/**
+ * print_X - prints hexa with capital
+ * @arguments: args passed
+ * Return: int
+ */
+int print_X(va_list arguments)
+{
+	int i, counter = 0;
+	unsigned int m;
+	char *str;
+
+	m = va_arg(arguments, unsigned int);
+	str = convert(m, 16);
+	if (m == 0)
+		counter += _putchar('0');
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		counter += _putchar(str[i]);
+	}
+	return (counter);
+}
