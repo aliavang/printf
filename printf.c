@@ -13,10 +13,11 @@ int _printf(const char *format, ...)
 		{"%", print_percent},
 		{"d", print_number},
 		{"i", print_number},
-		{"b", print_binary},
 		{"u", print_unsigned},
+		{"b", print_binary},
 		{"o", print_octal},
 		{"x", print_x},
+		{"r", print_rev},
 		{"X", print_X},
 		{NULL, NULL}
 	};

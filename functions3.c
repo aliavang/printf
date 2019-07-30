@@ -1,10 +1,10 @@
 #include "holberton.h"
 #include <unistd.h>
 /**
-  * print_x - prints hexadecimal with small letters
-  * @arguments: args passed
-  * Return: int
-  */
+ * print_x - prints hexadecimal with small letters
+ * @arguments: args passed
+ * Return: int
+ */
 int print_x(va_list arguments)
 {
 	int i, counter = 0;
@@ -44,4 +44,31 @@ int print_X(va_list arguments)
 		counter += _putchar(str[i]);
 	}
 	return (counter);
+}
+/**
+ * print_rev - prints reversed
+ * @arguments: args passed
+ * Return: int
+ */
+int print_rev(va_list arguments)
+{
+	char *str;
+	int len = 0, i;
+
+	str = va_arg(arguments, char*);
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	i = len - 1;
+
+	while (i >= 0)
+	{
+		_putchar(str[i--]);
+	}
+	return (len);
 }
