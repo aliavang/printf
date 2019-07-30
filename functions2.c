@@ -35,7 +35,7 @@ int print_unsigned(va_list arguments)
 	return (counter);
 }
 /**
-  * comvert - converts into base
+  * convert - converts into base
   * @n: number to convert
   * @base: base
   * Return: char
