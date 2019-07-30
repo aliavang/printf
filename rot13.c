@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * rot13 - Change string into rot13
- * @args: Argument list
+ * @arguments: Argument list
  *
  * Return: Characters printed
  */
@@ -22,7 +22,7 @@ int rot13(va_list arguments)
 		}
 		return (str_i);
 	}
-        str_i = 0;
+	str_i = 0;
 	while (s[str_i] != '\0')
 	{
 		str_icpy = str_i;
@@ -40,8 +40,8 @@ int rot13(va_list arguments)
 		}
 		if (str_i == str_icpy)
 		{
-		      _putchar(s[str_i]);
-		      str_i++;
+			_putchar(s[str_i]);
+			str_i++;
 		}
 	}
 	return (str_i);
