@@ -24,4 +24,5 @@ int print_number(va_list arguments);
 char *convert(unsigned int, int base);
 int print_binary(va_list arguments);
 int print_unsigned(va_list arguments);
+int print_octal(va_list arguments);
 #endif

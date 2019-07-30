@@ -79,3 +79,22 @@ int print_binary(va_list arguments)
 	}
 	return (counter);
 }
+/**
+ * print_octal - prints octal arg
+ * @arguments: args passed
+ * Return: int
+ */
+int print_octal(va_list arguments)
+{
+	int i, counter = 0;
+	unsigned int m;
+	char *str;
+
+	m = va_arg(arguments, unsigned int);
+	str = convert(m, 8);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		counter += _putchar(str[i]);
+	}
+	return (counter);
+}
