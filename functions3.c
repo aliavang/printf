@@ -72,3 +72,33 @@ int print_rev(va_list arguments)
 	}
 	return (len);
 }
+/**
+  * print_rot13 - prints string with rot13
+  * @arguments: args passed
+  * Return: int
+  */
+int print_rot13(va_list arguments)
+{
+	int i, j;
+	char alpha[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+	char swap[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
+	char *str;
+
+	str = va_arg(arguments, char *);
+	if (str == NULL)
+		s = "(null)";
+	for (i = 0; str[i]; i++)
+	{
+		for (j = 0; alpha[j]; j++)
+		{
+			if (alpha[j] == str[i])
+			{
+				_putchar(swap[j]);
+				break;
+			}
+		}
+		if (!alpha[j])
+			_putchar(str[i]);
+	}
+	return (i);
+}

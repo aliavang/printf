@@ -16,6 +16,7 @@ int _printf(const char *format, ...)
 		{"u", print_unsigned},
 		{"b", print_binary},
 		{"o", print_octal},
+		{"R", print_rot13},
 		{"x", print_x},
 		{"r", print_rev},
 		{"X", print_X},
