@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 		{"d", print_number},
 		{"i", print_number},
 		{"u", print_unsigned},
+		{"R", rot13},
 		{NULL, NULL}
 	};
 	va_list arguments;

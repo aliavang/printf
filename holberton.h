@@ -22,4 +22,5 @@ int print_str(va_list arguments);
 int print_percent(va_list arguments);
 int print_number(va_list arguments);
 int print_unsigned(va_list arguments);
+int rot13(va_list arguments);
 #endif
