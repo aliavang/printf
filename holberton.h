@@ -22,10 +22,4 @@ int print_str(va_list arguments);
 int print_percent(va_list arguments);
 int print_number(va_list arguments);
 int print_unsigned(va_list arguments);
-char *convert(unsigned int n, int base);
-int print_binary(va_list arguments);
-int print_octal(va_list arguments);
-int print_x(va_list arguments);
-int print_X(va_list arguments);
-int print_rev(va_list arguments);
 #endif
