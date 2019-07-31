@@ -6,7 +6,7 @@ To acquire _printf for usage, simply gather all files from the master branch by 
 No prerequisites required to install _printf as there is no installation involved.
 ### Installing
 To run _printf, simply call the function in your code your main file and compile all files that exists in the master branch. To be able to call the function, be sure to include the header file as shown below:
-```#include "holberton.h"
+```#include "holberton.h"```
 Once you are ready, you can compile all necessary files along with main file by typing in the command below to your command line in termainl:
 ```gcc *.c```
 Flags you may want to use while compiling include, but are not limited to:
@@ -37,6 +37,7 @@ int main(void)
 	_printf("Rot13: %R\n", "This is my string.");
 	return (0);
 }
+```
 ## Authors
 * [Banu Sapakova](https://github.com/banuaksom)
 * [Alia Vang](https://github.com/aliavang)
