@@ -17,15 +17,15 @@ int print_S(va_list arguments)
 
 	for (i = 0; str[i]; i++)
 	{
-		if (((int)str[i] > 0 && (int)str[i] < 32) || (int)str[i] >= 127)
+		if (str[i] < 32 || str[i] >= 127)
 		{
 			counter += _putchar('\\');
 			counter += _putchar('x');
-			if ((int)str[i] < 16)
+			if (str[i] < 16)
 			{
 				counter += _putchar('0');
 			}
-			hexa = convert((int)str[i], 16);
+			hexa = convert(str[i], 16);
 			for (j = 0; hexa[j]; j++)
 			{
 				counter += _putchar(hexa[j]);
