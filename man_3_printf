@@ -1,0 +1,61 @@
+.TH _printf 1 "31 July 2019" "version 1.0" "User Commands"
+.SH NAME
+_printf - Prints data according to format
+.SH SYNOPSIS
+.B _printf
+ - 
+.I FORMAT
+[
+.I ARGUMENT
+]...
+.PP
+.B #include "holberton.h"
+
+.B int _printf(const char *format, ...);
+.SH DESCRIPTION
+Print ARGUMENT(s) according to FORMAT(s) specifier to
+.I stdout
+upon executing program from command line. To declare specifier, include '%' before format specifier. If format specifier does not exist, _printf should print the string as is.
+.PP
+.B Return value
+.br
+Upon success, _printf returns the count of characters printed to stdout excluding the null byte. If a error is encountered, a negative value is returned.
+
+.PP
+.B Format
+.br
+_printf("%d", 14);
+
+will print the number 14 to stdout.
+.SH FORMAT SPECIFIER OPTIONS
+A character that specifies which type of conversion needs to be applied to the argument. Below are the specifiers and their meanings:
+.PP
+%c - Print the argument in character format. Only print one character per specification.
+.br
+%s - Print the argument in string format. The string is printed up to the null byte.
+.br
+%% - Print a percent sign and no argument is converted.
+.br
+%d - Print argument int in signed decimal notation.
+.br
+%i - Similarly to d, print argument to signed decimal notation.
+.br
+%b - Print argument int in binary.
+.br
+%u - Print argument int in unsigned decimal notation.
+.br
+%o - Print argument int in unsiged octal notation.
+.br
+%x - Print argument int in unsigned hexadecimal notation in lowercase.
+.br
+%X - Silimar to %x with difference in printing in uppercase.
+.br
+%r - Print argument string in reverse order.
+.br
+%R - Print argument string in rot13.
+.SH BUGS
+There are no known bugs at the current time. If any bugs are spotted, please feel free to email us and let us know!
+.SH SEE ALSO
+printf(1)
+.SH AUTHOR
+Banu Sapakova (876@holbertonschool.com), Alia Vang (714@holbertonschool.com)
