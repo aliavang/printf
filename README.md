@@ -9,6 +9,7 @@ To run _printf, simply call the function in your code your main file and compile
 ```#include "holberton.h"```
 Once you are ready, you can compile all necessary files along with main file by typing to your command line in terminal:
 ```gcc *.c```
+
 Flags you may want to use while compiling include, but are not limited to:
 * -Wall
 * -Werror
