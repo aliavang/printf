@@ -28,5 +28,5 @@ int print_octal(va_list arguments);
 int print_x(va_list arguments);
 int print_X(va_list arguments);
 int print_rev(va_list arguments);
-int print_rot13(va_list arguments);
+int print_S(va_list arguments);
 #endif
